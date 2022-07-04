@@ -1,0 +1,65 @@
+:root{
+    /* Colors */
+    --primary-color: rgb(73, 73, 73);
+    --secondary-color: whitesmoke;
+    --black-color: whitesmoke;
+    /* Fonts */
+    --nice-fonts: "Roboto";
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body>.contextbox{
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    font-family: var(--nice-fonts);
+    font-weight: 600;
+    background-color: var(--primary-color);
+    color: var(--black-color);
+}
+body>.contextbox>.text{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 0.4em;
+}
+
+body>.contextbox>.text>ul{
+    list-style-type: none;
+    height: 1.3em;
+    line-height: 1.2em;
+    overflow: hidden;
+}
+
+ul>li{
+    position: relative;
+    top: 0px;
+    animation: walk 20s 2s steps(4) infinite;
+}
+@keyframes walk {
+    to{
+        top: -360%;
+    }
+}
+ul>li::after,
+ul>li::before{
+    content: '';
+    position: absolute;
+    border-left: 0.14em solid var(--black-color);
+    background-color: var(--primary-color);
+    margin-left: -0.24em;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: move 5s 2s steps(24) infinite;
+}
+@keyframes move {
+    to{
+        left: 100%;
+        margin-left: 0.24em;
+    }
+}

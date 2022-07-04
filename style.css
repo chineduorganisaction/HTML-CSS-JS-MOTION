@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    height: 100vh;
+    width: 100;
+    padding: 10% 20% 20% 20%;
+    background-color: darkred;
+}
+
+#box{
+    width: 80%;
+    height: auto;
+    background-color: white;
+    padding: 20px;
+}
+
+ul{
+    color: black;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+ul li{
+    padding: 20px;
+    border-radius: 20px;
+    border: darkgray solid 2px;
+    background-color: grey;
+}
+
+#control{
+    display: flex;
+    width: 80%;
+    height: auto;
+    padding: 20px;
+    background-color: white;
+    justify-items: center;
+}
+
+#input{
+    display: flex;
+    padding: 10px;
+    width: 50%;
+}
+
+button #enter{
+    padding: 0 10px;
+}
